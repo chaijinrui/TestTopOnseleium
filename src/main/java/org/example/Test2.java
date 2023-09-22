@@ -21,7 +21,7 @@ public class Test2 {
         chromeDriver.manage().window().maximize();
         chromeDriver.get("https://app.toponad.com/m/login");
 //       登录
-        //xpath定位  //*[@id="app"]/div[2]/form/div[1]/div/div/div[1]/input
+        //xpath定位  //*[@id="app"]/div[2]/form/div[1]/div/di v/div[1]/input
         chromeDriver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/form/div[1]/div/div/div[1]/input")).sendKeys("xunshitiankong@163.com");
         chromeDriver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/form/div[2]/div/div/div[1]/input")).sendKeys("Bj@116118");
         chromeDriver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/form/div[4]/div")).click();
@@ -35,7 +35,6 @@ public class Test2 {
 //        搜索
         chromeDriver.findElementByClassName("label-box").click();
 //        adx开关
-        chromeDriver.findElementByXPath("//*[@id=\"app\"]/div[2]/div[2]/section/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/table/tbody[1]/tr[2]/td[4]/div/div/div/div/span").click();
         //*[@id="app"]/div[2]/div[2]/section/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/table/tbody[1]/tr[2]/td[4]/div/div/div/div/span
         Thread.sleep(3000);
 
