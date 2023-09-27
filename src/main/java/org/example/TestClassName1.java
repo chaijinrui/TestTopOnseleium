@@ -28,7 +28,6 @@ public class TestClassName1 {
         chromeDriver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/form/div[2]/div/div/div[1]/input")).sendKeys("Bj@116118");
         chromeDriver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/form/div[4]/div")).click();
 
-//        chromeDriver.switchTo().frame("is-active");
 //todo 未经确认的定位横成功
         chromeDriver.findElementByCssSelector(".mediation").click();
 
