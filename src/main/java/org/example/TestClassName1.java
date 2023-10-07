@@ -33,6 +33,7 @@ public class TestClassName1 {
 
         chromeDriver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/section/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div")).click();
         chromeDriver.findElementByXPath("/html/body/div[1]/div[2]/div[2]/section/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/table/tbody[1]/tr[2]/td[4]/div/div/div/div/span").click();
-
+//        关闭 按钮
+        chromeDriver.findElementByXPath("/html/body/div[2]/div/div[3]/div/button").click();
     }
 }
