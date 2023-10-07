@@ -36,16 +36,15 @@ public class TestClassName1 {
         chromeDriver.findElementByXPath("/html/body/div[1]/div[2]/div[2]/section/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/table/tbody[1]/tr[2]/td[4]/div/div/div/div/span").click();
 //        用绝对路径定位关闭 按钮
 //    chromeDriver.findElementByXPath("/html/body/div[2]/div/div[3]/div/button").click();
-        if (Tools.check(chromeDriver,new By.ByXPath("/html/body/div[2]/div/div[3]/div/button"))) {
+        if (Tools.check(chromeDriver, new By.ByXPath("/html/body/div[2]/div/div[3]/div/button"))) {
             System.out.println("yes");
         } else {
             System.out.println("no");
         }
+        chromeDriver.findElementByXPath("/html/body/div[2]/div/div[3]/div/button").click();
     }
 }
 
 
-/*
-测试类：元素是否存在
- */
+
 

@@ -12,16 +12,18 @@ import org.openqa.selenium.WebDriver;
  * Description：工具类
  */
 
-/*
-测试类：元素是否存在
+
+public class Tools {
+    /*
+元素是否存在
  */
-public class  Tools {
     @Test
     public static Boolean check(WebDriver driver, By seletor) {
         try {
             driver.findElement(seletor);
             return true;
         } catch (Exception e) {
+            System.out.println(seletor);
             // TODO: handle exception
             return false;
         }
