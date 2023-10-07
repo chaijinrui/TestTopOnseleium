@@ -1,7 +1,10 @@
 package org.example;
 
+import org.example.tools.Tools;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -14,9 +17,7 @@ import java.util.concurrent.TimeUnit;
  * Description：
  */
 public class TestClassName1 {
-    @Test
-    public void test() throws InterruptedException {
-
+    public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
         ChromeDriver chromeDriver = new ChromeDriver();
         chromeDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -33,7 +34,28 @@ public class TestClassName1 {
 
         chromeDriver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/section/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div")).click();
         chromeDriver.findElementByXPath("/html/body/div[1]/div[2]/div[2]/section/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/table/tbody[1]/tr[2]/td[4]/div/div/div/div/span").click();
-//        关闭 按钮
-        chromeDriver.findElementByXPath("/html/body/div[2]/div/div[3]/div/button").click();
+//        用绝对路径定位关闭 按钮
+//    chromeDriver.findElementByXPath("/html/body/div[2]/div/div[3]/div/button").click();
+        testElementExists testElementExists = new testElementExists();
+        if (testElementExists.testElementExists(chromeDriver)) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+
+    }
+}
+
+
+/*
+测试类：元素是否存在
+ */
+class testElementExists {
+    public boolean testElementExists(WebDriver driver) {
+        By.ByXPath byXPath = new By.ByXPath("/html/body/div[2]/div/div[3]/div/button");
+        if (Tools.check(driver, byXPath)) {
+            return true;
+        } else
+            return false;
     }
 }
